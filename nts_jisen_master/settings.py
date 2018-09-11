@@ -225,7 +225,7 @@ TEMPLATES = [
         },
     },
 ]
-TEMPLATE_DIRS = [TEMPLATES[0]['DIRS'][0]]
+# TEMPLATE_DIRS = [TEMPLATES[0]['DIRS'][0]]
 
 if DJANGO_VERSION < (1, 9):
     del TEMPLATES[0]["OPTIONS"]["builtins"]
