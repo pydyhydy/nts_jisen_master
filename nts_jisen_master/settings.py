@@ -201,6 +201,7 @@ TEMPLATES = [
             os.path.join(PROJECT_ROOT, "custom/templates"),
             os.path.join(PROJECT_ROOT, "templates")
         ],
+        "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
                 "django.contrib.auth.context_processors.auth",
@@ -217,15 +218,14 @@ TEMPLATES = [
             "builtins": [
                 "mezzanine.template.loader_tags",
             ],
-            "loaders": [
-                "mezzanine.template.loaders.host_themes.Loader",
-                "django.template.loaders.filesystem.Loader",
-                "django.template.loaders.app_directories.Loader",
-            ]
+            # "loaders": [
+            #     "mezzanine.template.loaders.host_themes.Loader",
+            #     "django.template.loaders.filesystem.Loader",
+            #     "django.template.loaders.app_directories.Loader",
+            # ]
         },
     },
 ]
-# TEMPLATE_DIRS = [TEMPLATES[0]['DIRS'][0]]
 
 if DJANGO_VERSION < (1, 9):
     del TEMPLATES[0]["OPTIONS"]["builtins"]
