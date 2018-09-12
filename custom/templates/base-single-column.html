@@ -15,26 +15,9 @@
     <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
     {% endifinstalled %}
         
-    <!-- {% compress css %}
-    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
-    <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
-    <link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
-    {% if LANGUAGE_BIDI %}
-    <link rel="stylesheet" href="{% static "css/bootstrap-rtl.css" %}">
-    {% endif %}
-    {% ifinstalled cartridge.shop %}
-    <link rel="stylesheet" href="{% static "css/cartridge.css" %}">
-    {% if LANGUAGE_BIDI %}
-    <link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
-    {% endif %}
-    {% endifinstalled %}
-    {% block extra_css %}{% endblock %}
-    {% endcompress %} -->
     
-    {% compress js %}
-    <!-- Bootstrap core CSS -->
+    {% compress css %}
     <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
-    <!-- Add custom CSS here -->
     <link href="{% static "css/modern-business.css" %}" rel="stylesheet">
     <link href="{% static "font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
@@ -47,8 +30,9 @@
     <link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
     {% endif %}
     {% endifinstalled %}
-    {% block extra_js %}{% endblock %}
+    {% block extra_css %}{% endblock %}
     {% endcompress %}
+    
 
 <!--[if lt IE 9]>
 <script src="{% static "js/html5shiv.js" %}"></script>
