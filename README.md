@@ -3,6 +3,8 @@
 Hope it works well.
 
 chmod +x manage.py, at WSL with DrvFS
-LF and chmod again
-added: 
-    TEMPLATE_DIRS = [TEMPLATES[0]['DIRS'][0]]
+
+manage.py should be carefully managed with "LF" and "chmod +x"
+
+several changes in setting.py
+
